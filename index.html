@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144351462-1"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-144351462-1');
+</script>
+
+    <!---<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>PIZZA PALACE</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/styles.css">
@@ -46,7 +56,7 @@
                           <option value="Deeppan">Deeppan -- sh. 180</option>
                           <option value="Flatbread">Flatbread-- sh. 150</option>
                         </select>
-                      <label for="Toppings">Select Your Toppings at sh. 40 each</label><br>
+                      <label for="Toppings">Select Your Toppings at sh. 50 each</label><br>
                         <div class="custom-control custom-checkbox custom-control-inline">
                           <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
                           <label class="custom-control-label" for="Sausage">Sausage</label>
@@ -74,12 +84,9 @@
                       <p>Incase of any comment of complaint, Please reach out to us as fast as possible.</p>
                       <p id="regards">Regards, Management</p>
                     </div>
-                    <div class="choice">  <!--****************THis was earlier called choise***********-->
-
-
-
-
+                     <!--****************THis was earlier called choise***********-->
                         <!--*****************This area displays what you have ordered*************-->
+                    <div class="choice"> 
                       <h2>Your Order is:</h2>
                       <div id="your-orders">
                         <table class="table table-sm  pizzatable">
@@ -125,5 +132,8 @@
               </div>
             </div>
           </div>    
+          <script src="https://code.jquery.com/jquery-3.6.0.js" 
+          integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+          <script src="./js/scripts.js"></script>
 </body>
 </html>
