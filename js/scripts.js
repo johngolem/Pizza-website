@@ -10,11 +10,6 @@ function Getpizza( name,size,crust,topping, total ){
 
 // proceed button
 $(document).ready(function(){
-    // $("button.proceed").click(function(){
-    //   $("button.proceed").hide();
-    //   $("#information").hide();
-    //   $("div.choise").slideDown(1000);
-    // });
     $("button.proceed").click(function(event){
      let pname = $(".name option:selected").val();
      let psize = $("#size option:selected").val();
@@ -62,22 +57,22 @@ $(document).ready(function(){
         break
         default:
           console.log("No price");        
-    }
-    let topping_value = ptopping.length*50;
-    console.log("toppins value" + topping_value);
+     }
+      let topping_value = ptopping.length*50;
+      console.log("toppins value" + topping_value);
 
-    if((psize == "0") && (pcrust == "0")){
-      console.log("nothing selected");
+     if((psize == "0") && (pcrust == "0")){
+      console.log("nothing selected");  
       $("button.proceed").show();
       $("#information").show();
-      $("div.choice").hide();
+      $("div.choise").hide();
       alert("Please select pizza size and crust"); 
-    }
-    else{
+     }
+     else{
       $("button.proceed").hide();
       $("#information").hide();
-      $("div.choice").slideDown(1000);
-    }
+      $("div.choise").slideDown(1000);
+     }
 
     total = price + crust_price + topping_value;
     console.log(total);
