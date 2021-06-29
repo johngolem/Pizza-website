@@ -25,48 +25,46 @@ $(document).ready(function(){
      });
      console.log(ptopping.join(", "));
   
-        switch(psize){
-            case "0":
-              price =0;
-            break;
-            case "extra-large":
-               price = 1200;
-               console.log(price);
-             break;
-             case "large":
-               price = 1000;
-               console.log(price);
-             break;
-             case "medium":
-               price = 800;
-               console.log("The price is "+price);
-             break;
-             case "small":
-               price = 600;
-               console.log(price);
-             default:
-               console.log("error"); 
-        }
-        switch(pcrust){
-            case "0":
-                cust_price =0;
-            break;
-            case "Neopolitan":
-                cust_price =200;
-                console.log(price)
-            break;
-            case "Deeppan":
-                cust_price =180;
-                console.log(price)
-            break;
-            case "Flatbread":
-                cust_price =150;
-                console.log(price)
-            default:
-                console.log("No price");        
-        }
-        let topping_value = ptopping.length*50;
-    console.log("toppings value" + topping_value);
+     switch(psize){
+      case "0":
+        price =0;
+      break;
+      case "extra-large":
+        price = 1200;
+        console.log(price);
+       break;
+       case "large":
+         price = 1000;
+         console.log(price);
+       break;
+       case "medium":
+         price = 800;
+         console.log("The price is "+price);
+       break;
+       case "small":
+         price = 600;
+         console.log(price);
+       default:
+         console.log("error"); 
+     }
+     switch(pcrust){
+       case "0":
+         cust_price =0;
+       break;
+       case "Neopolitan":
+         cust_price =200;
+       break;
+       case "Deeppan":
+         cust_price =180;
+       break;
+       case "Flatbread":
+         cust_price =150;
+        break
+        default:
+          console.log("No price");        
+    }
+    let topping_value = ptopping.length*50;
+    console.log("toppins value" + topping_value);
 
     if((psize == "0") && (pcrust == "0")){
       console.log("nothing selected");
@@ -103,42 +101,42 @@ $(document).ready(function(){
     });
     console.log(ptopping.join(", "));
     switch(psize){
-        case "0":
-          price =0;
-        break;
-        case "extra-large":
-          price = 1200;
+      case "0":
+        price =0;
+      break;
+      case "extra-large":
+        price = 1200;
           console.log(price);
         break;
-        case "large":
-          price = 1000;
+      case "large":
+        price = 1000;
           console.log(price);    
         break;
-        case "medium":
-          price = 800;
+      case "medium":
+        price = 800;
           console.log("The price is "+price);
-        break;
-        case "small":
-          price = 600;
+      break;
+      case "small":
+        price = 600;
           console.log(price);
-        default:
-          console.log("error"); 
-    }
-        switch(pcrust){
-           case "0":
-             crust_price = 0;
-           break;
-           case "Neopolitan":
-             crust_price = 200;
-           break;
-           case "Deeppan":
-             crust_price = 180;
-           break;
-           case "Flatbread":
-             crust_price = 150;
-           break;
-           default:
-             console.log("No price");
+      default:
+        console.log("error"); 
+      } 
+      switch(pcrust){
+         case "0":
+           crust_price = 0;
+         break;
+         case "Neopolitan":
+           crust_price = 200;
+         break;
+         case "Deeppan":
+           crust_price = 180;
+         break;
+         case "Flatbread":
+           crust_price = 150;
+         break;
+         default:
+           console.log("No price");
     }
     let topping_value = ptopping.length*50;
     console.log("toppins value" + topping_value);
@@ -172,9 +170,9 @@ $(document).ready(function(){
       $("#addedprice").hide();
       $("button.deliver").hide();
       $("#pizzatotal").hide();
-      let deliceryamount= checkoutTotal+100;
-      console.log("You will pay sh. "+deliceryamount+" on delivery");
-      $("#totalbill").append("Your bill plus delivery fee is: "+deliceryamount);
+      let deliveryamount= checkoutTotal+100;
+      console.log("You will pay sh. "+deliveryamount+" on delivery");
+      $("#totalbill").append("Your bill plus delivery fee is: "+deliveryamount);
     });
 
     // ******************************************when one clicks place order button
@@ -184,15 +182,15 @@ $(document).ready(function(){
       $("#pizzatotal").hide();
       $(".delivery").hide();
       $("button#final-order").hide();
-      let deliceryamount= checkoutTotal+100;
-      console.log("Final Bill is: "+deliceryamount);
+      let deliveryamount= checkoutTotal+100;
+      console.log("Final Bill is: "+deliveryamount);
       let person = $("input#name").val();
       let phone = $("input#phone").val();
       let location = $("input#location").val();
 
       if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
   
-        $("#finallmessage").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliceryamount);
+        $("#finallmessage").append(person+", We have recieved your order and it will be delivered to you at "+location+ ". Prepare sh. "+deliveryamount);
         $("#totalbill").hide();
         $("#finallmessage").slideDown(1200);
       }
